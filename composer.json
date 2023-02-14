@@ -1,0 +1,33 @@
+{
+    "name": "nice-yu/jwt-auth",
+    "description": "Generate a generic login token using the jwt scheme",
+    "keywords": ["jwt-auth","auth","token","generate token","login token"],
+    "homepage": "https://github.com/nice-yu/jwt-auth",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "nice-yu",
+            "email": "nice-yu@qq.com"
+        }
+    ],
+    "autoload":{
+        "psr-4":{
+            "NiceYu\\JwtAuth\\":"./src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "NiceYu\\Tests\\JwtAuth\\": "tests/"
+        }
+    },
+    "require": {
+        "php": ">=7.4",
+        "jms/serializer": "^3.22",
+        "nice-yu/php-enum": "^1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "symfony/var-dumper": "^5.4"
+    }
+}
