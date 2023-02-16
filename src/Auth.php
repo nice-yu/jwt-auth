@@ -5,7 +5,6 @@ namespace NiceYu\JwtAuth;
 
 use DateTime;
 use DateTimeZone;
-use Exception;
 
 class Auth
 {

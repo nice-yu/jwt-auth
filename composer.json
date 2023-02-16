@@ -23,8 +23,7 @@
     },
     "require": {
         "php": ">=7.4",
-        "jms/serializer": "^3.22",
-        "nice-yu/php-enum": "^1.0"
+        "jms/serializer": ">=3.22"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.5",

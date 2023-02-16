@@ -67,12 +67,12 @@ final class JwtAuthTest extends TestCase
         $jwtAuth = new JwtAuth();
         $token  = $jwtAuth
             ->setId('1')
-            ->setPlatform(PlatformEnum::WEB()->value)
+            ->setPlatform('web')
             ->generate();
 
         $verify = $jwtAuth->verify($token->token);
         $this->assertEquals('1',$verify->id);
-        $this->assertEquals(PlatformEnum::WEB()->value,$verify->platform);
+        $this->assertEquals('web',$verify->platform);
     }
 
     /**
@@ -144,12 +144,12 @@ final class JwtAuthTest extends TestCase
             ->setIssued('+1 day')
             ->setExpire('+1 day')
             ->setSecret('secret')
-            ->setPlatform(PlatformEnum::WECHAT_PUBLIC_ACCOUNT()->value)
+            ->setPlatform('wechat_public_account')
             ->setDateTimeZone('Asia/Shanghai')
             ->generate();
 
         $verify = $jwtAuth->verify($token->token);
         $this->assertEquals('2',$verify->id);
-        $this->assertEquals(PlatformEnum::WECHAT_PUBLIC_ACCOUNT()->value,$verify->platform);
+        $this->assertEquals('wechat_public_account',$verify->platform);
     }
 }
