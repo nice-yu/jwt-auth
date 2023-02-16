@@ -28,7 +28,7 @@ $token  = $jwtAuth
     ->setExpire('+1 day')
     ->setOutput(true)
     ->setSecret('secret')
-    ->setPlatform(PlatformEnum::WEB()->value)
+    ->setPlatform('web')
     ->setDateTimeZone('Asia/Shanghai')
 ```
 
